@@ -13,10 +13,32 @@
             text-align: center;
             direction: rtl;
         }
+        header {
+            position: sticky;
+            top: 0;
+            background: linear-gradient(to right, #eef2f3, #8e9eab);
+            padding-bottom: 10px;
+            z-index: 1000;
+        }
         h1 {
             color: #2c3e50;
-            margin-bottom: 40px;
+            margin-bottom: 10px;
             font-size: 2.5em;
+        }
+        .donate-button {
+            display: inline-block;
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .donate-button:hover {
+            background-color: #219150;
         }
         .link-list {
             display: flex;
@@ -50,14 +72,20 @@
                 font-size: 18px;
                 padding: 15px 20px;
             }
+            .donate-button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>המצב הנתון - מאגר כלים שימושיים</h1>
+    <header>
+        <h1>המצב הנתון - מאגר כלים שימושיים</h1>
+        <a class="donate-button" href="https://beactive.co.il/project/80004" target="_blank">תרומה למצב הנתון</a>
+    </header>
 
-    
     <div class="link-list">
         <a class="link-item" href="https://gil1feldman.github.io/conceptions/" target="_blank">תיעוד ידיעות חשובות</a>
         <a class="link-item" href="https://gil1feldman.github.io/RODANUT/" target="_blank">מחולל תמונה: רודנות בחסות החוק</a>
@@ -65,7 +93,6 @@
         <a class="link-item" href="https://gil1feldman.github.io/wiki_last_edits/" target="_blank">עריכות אחרונות בוויקיפדיה</a>
         <a class="link-item" href="https://gil1feldman.github.io/my-form/" target="_blank">נתוני צפיות ועריכות של ערך בוויקיפדיה</a>
         <a class="link-item" href="https://gil1feldman.github.io/my-form/panels.html" target="_blank">דיווח על שופרות בתקשורת</a>
-                    
     </div>
 
 </body>
