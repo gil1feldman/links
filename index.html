@@ -16,6 +16,9 @@
             display: flex;
             flex-direction: column;
         }
+        body {
+            min-height: 100vh;
+        }
         header {
             position: sticky;
             top: 0;
@@ -43,13 +46,19 @@
         .donate-button:hover {
             background-color: #219150;
         }
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
         .link-list {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 20px;
-            flex: 1;
-            padding: 20px;
+            width: 100%;
         }
         .link-item {
             background: #ffffff;
@@ -105,14 +114,16 @@
         <a class="donate-button" href="https://beactive.co.il/project/80004" target="_blank">תרומה למצב הנתון</a>
     </header>
 
-    <div class="link-list">
-        <a class="link-item" href="https://gil1feldman.github.io/conceptions/" target="_blank">תיעוד ידיעות חשובות</a>
-        <a class="link-item" href="https://gil1feldman.github.io/RODANUT/" target="_blank">מחולל תמונה: רודנות בחסות החוק</a>
-        <a class="link-item" href="https://gil1feldman.github.io/Fascism/" target="_blank">מחולל תמונה: סממני הפשיזם</a>
-        <a class="link-item" href="https://gil1feldman.github.io/wiki_last_edits/" target="_blank">עריכות אחרונות בוויקיפדיה</a>
-        <a class="link-item" href="https://gil1feldman.github.io/my-form/" target="_blank">נתוני צפיות ועריכות של ערך בוויקיפדיה</a>
-        <a class="link-item" href="https://gil1feldman.github.io/my-form/panels.html" target="_blank">דיווח על שופרות בתקשורת</a>
-    </div>
+    <main>
+        <div class="link-list">
+            <a class="link-item" href="https://gil1feldman.github.io/conceptions/" target="_blank">תיעוד ידיעות חשובות</a>
+            <a class="link-item" href="https://gil1feldman.github.io/RODANUT/" target="_blank">מחולל תמונה: רודנות בחסות החוק</a>
+            <a class="link-item" href="https://gil1feldman.github.io/Fascism/" target="_blank">מחולל תמונה: סממני הפשיזם</a>
+            <a class="link-item" href="https://gil1feldman.github.io/wiki_last_edits/" target="_blank">עריכות אחרונות בוויקיפדיה</a>
+            <a class="link-item" href="https://gil1feldman.github.io/my-form/" target="_blank">נתוני צפיות ועריכות של ערך בוויקיפדיה</a>
+            <a class="link-item" href="https://gil1feldman.github.io/my-form/panels.html" target="_blank">דיווח על שופרות בתקשורת</a>
+        </div>
+    </main>
 
     <footer>
         הכלים מפותחים ע"י גיל פלדמן, המצב הנתון |
