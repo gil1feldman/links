@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>המצב הנתון - מאגר כלים שימושיים</title>
     <style>
-        body {
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(to right, #eef2f3, #8e9eab);
-            margin: 0;
-            padding: 20px;
             text-align: center;
             direction: rtl;
-            min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
@@ -48,7 +48,8 @@
             flex-direction: column;
             align-items: center;
             gap: 20px;
-            flex-grow: 1;
+            flex: 1; /* גמיש למלא מקום */
+            padding: 20px;
         }
         .link-item {
             background: #ffffff;
@@ -69,9 +70,8 @@
             background-color: #f0f8ff;
         }
         footer {
-            margin-top: 40px;
-            padding: 20px;
             background-color: #d6d6d6;
+            padding: 15px;
             font-size: 14px;
             color: #555;
         }
@@ -116,7 +116,7 @@
 
     <footer>
         הכלים מפותחים ע"י גיל פלדמן, המצב הנתון | 
-        <a href="https://twitter.com/feldman_gil" target="_blank">feldman_gil@</a>
+        <a href="https://twitter.com/feldman_gil" target="_blank">@feldman_gil</a>
     </footer>
 
 </body>
