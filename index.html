@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ריכוז קישורים חשובים</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #eef2f3, #8e9eab);
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            direction: rtl;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+        .link-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .link-item {
+            background: #ffffff;
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 90%;
+            max-width: 600px;
+            text-decoration: none;
+            color: #34495e;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .link-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+            background-color: #f0f8ff;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            .link-item {
+                font-size: 18px;
+                padding: 15px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ריכוז קישורים חשובים</h1>
+
+    <div class="link-list">
+        <a class="link-item" href="https://gil1feldman.github.io/conceptions/" target="_blank">תפיסות</a>
+        <a class="link-item" href="https://gil1feldman.github.io/RODANUT/" target="_blank">רודנות</a>
+        <a class="link-item" href="https://gil1feldman.github.io/wiki_last_edits/" target="_blank">עריכות אחרונות בוויקיפדיה</a>
+        <a class="link-item" href="https://gil1feldman.github.io/Fascism/" target="_blank">סממני פשיזם</a>
+    </div>
+
+</body>
+</html>
