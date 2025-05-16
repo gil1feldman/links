@@ -1,182 +1,209 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>המצב הנתון - מאגר כלים שימושיים</title>
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(to right, #eef2f3, #8e9eab);
-            text-align: center;
-            direction: rtl;
-            display: flex;
-            flex-direction: column;
-        }
-        body {
-            min-height: 100vh;
-        }
-        header {
-            position: sticky;
-            top: 0;
-            background: linear-gradient(to right, #eef2f3, #8e9eab);
-            padding-bottom: 10px;
-            z-index: 1000;
-        }
-        .header-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .header-actions {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 10px;
-            font-size: 2.5em;
-        }
-        .donate-button {
-            display: inline-block;
-            background-color: #27ae60;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        .donate-button:hover {
-            background-color: #219150;
-        }
-        #searchInput {
-            padding: 8px 12px;
-            font-size: 14px;
-            border-radius: 20px;
-            border: 1px solid #ccc;
-            width: 180px;
-            transition: box-shadow 0.3s;
-        }
-        #searchInput:focus {
-            outline: none;
-            box-shadow: 0 0 5px rgba(39, 174, 96, 0.6);
-        }
-        main {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-        .link-list {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            width: 100%;
-        }
-        .link-item {
-            background: #ffffff;
-            padding: 20px 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s, box-shadow 0.3s;
-            width: 90%;
-            max-width: 600px;
-            text-decoration: none;
-            color: #34495e;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .link-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-            background-color: #f0f8ff;
-        }
-        footer {
-            background-color: #d6d6d6;
-            padding: 15px;
-            font-size: 14px;
-            color: #555;
-        }
-        footer a {
-            color: #2c3e50;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2em;
-            }
-            .link-item {
-                font-size: 18px;
-                padding: 15px 20px;
-            }
-            .donate-button {
-                font-size: 14px;
-                padding: 8px 16px;
-            }
-            #searchInput {
-                width: 100%;
-                max-width: 250px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>המצב הנתון - מאגר כלים שימושיים</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #eef2f3, #8e9eab);
+      text-align: center;
+      direction: rtl;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body {
+      min-height: 100vh;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: linear-gradient(to right, #eef2f3, #8e9eab);
+      padding-bottom: 10px;
+      z-index: 1000;
+    }
+
+    .header-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+      font-size: 2.2em;
+    }
+
+    .donate-button {
+      display: inline-block;
+      background-color: #27ae60;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .donate-button:hover {
+      background-color: #219150;
+    }
+
+    #searchInput {
+      padding: 6px 10px;
+      font-size: 14px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      width: 180px;
+      transition: box-shadow 0.3s;
+    }
+
+    #searchInput:focus {
+      outline: none;
+      box-shadow: 0 0 5px rgba(39, 174, 96, 0.6);
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .link-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1000px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .link-item {
+      background: #ffffff;
+      padding: 14px 18px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-align: center;
+      text-decoration: none;
+      color: #34495e;
+      font-size: 16px;
+      font-weight: 500;
+      min-height: 60px;
+    }
+
+    .link-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      background-color: #f0f8ff;
+    }
+
+    footer {
+      background-color: #d6d6d6;
+      padding: 15px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    footer a {
+      color: #2c3e50;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.6em;
+      }
+
+      .link-list {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 12px;
+      }
+
+      .link-item {
+        font-size: 14px;
+        padding: 10px;
+      }
+
+      .donate-button {
+        font-size: 13px;
+        padding: 6px 12px;
+      }
+
+      #searchInput {
+        width: 100%;
+        max-width: 250px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <div class="header-content">
-            <h1>המצב הנתון - מאגר כלים שימושיים</h1>
-            <div class="header-actions">
-                <a class="donate-button" href="https://beactive.co.il/project/80004" target="_blank">תרומה למצב הנתון</a>
-                <input type="text" id="searchInput" placeholder="חיפוש..." />
-            </div>
-        </div>
-    </header>
+  <header>
+    <div class="header-content">
+      <h1>המצב הנתון - מאגר כלים שימושיים</h1>
+      <div class="header-actions">
+        <a class="donate-button" href="https://beactive.co.il/project/80004" target="_blank">תרומה למצב הנתון</a>
+        <input type="text" id="searchInput" placeholder="חיפוש..." />
+      </div>
+    </div>
+  </header>
 
-    <main>
-        <div class="link-list">
-            <a class="link-item" href="https://gil1feldman.github.io/conceptions/" target="_blank">תיעוד ידיעות חשובות לשמירה על הדמוקרטיה</a>
-            <a class="link-item" href="https://gil1feldman.github.io/israel_activity_log/" target="_blank">תיעוד דברים חשובים שמתרחשים במדינה</a>
-            <a class="link-item" href="https://gil1feldman.github.io/gorem_medini/" target="_blank">תיעוד דיווחים בשם "גורם מדיני"</a>
-            <a class="link-item" href="https://gil1feldman.github.io/Event_documentation/" target="_blank">תיעוד תגובות חברי כנסת לאירועים</a>
-            <a class="link-item" href="https://gil1feldman.github.io/my-form/panels.html" target="_blank">תיעוד שופרות בפאנלים בתקשורת</a>
-            <a class="link-item" href="https://gil1feldman.github.io/RODANUT/" target="_blank">מחולל תמונה: רודנות בחסות החוק</a>
-            <a class="link-item" href="https://gil1feldman.github.io/Fascism/" target="_blank">מחולל תמונה: סממני הפשיזם</a>
-            <a class="link-item" href="https://gil1feldman.github.io/wiki_last_edits/" target="_blank">עריכות אחרונות בוויקיפדיה</a>
-            <a class="link-item" href="https://gil1feldman.github.io/my-form/" target="_blank">נתוני צפיות ועריכות של ערך בוויקיפדיה</a>
-            <a class="link-item" href="https://gil1feldman.github.io/Wiki_users/" target="_blank">נתוני עריכות של עורכים בויקיפדיה</a>            
-            <a class="link-item" href="https://gil1feldman.github.io/Knesset_laws/" target="_blank">הצעות חוק</a>            
-        </div>
-    </main>
+  <main>
+    <div class="link-list">
+      <a class="link-item" href="https://gil1feldman.github.io/conceptions/" target="_blank">תיעוד ידיעות חשובות לשמירה על הדמוקרטיה</a>
+      <a class="link-item" href="https://gil1feldman.github.io/israel_activity_log/" target="_blank">תיעוד דברים חשובים שמתרחשים במדינה</a>
+      <a class="link-item" href="https://gil1feldman.github.io/gorem_medini/" target="_blank">תיעוד דיווחים בשם "גורם מדיני"</a>
+      <a class="link-item" href="https://gil1feldman.github.io/Event_documentation/" target="_blank">תיעוד תגובות חברי כנסת לאירועים</a>
+      <a class="link-item" href="https://gil1feldman.github.io/my-form/panels.html" target="_blank">תיעוד שופרות בפאנלים בתקשורת</a>
+      <a class="link-item" href="https://gil1feldman.github.io/RODANUT/" target="_blank">מחולל תמונה: רודנות בחסות החוק</a>
+      <a class="link-item" href="https://gil1feldman.github.io/Fascism/" target="_blank">מחולל תמונה: סממני הפשיזם</a>
+      <a class="link-item" href="https://gil1feldman.github.io/wiki_last_edits/" target="_blank">עריכות אחרונות בוויקיפדיה</a>
+      <a class="link-item" href="https://gil1feldman.github.io/my-form/" target="_blank">נתוני צפיות ועריכות של ערך בוויקיפדיה</a>
+      <a class="link-item" href="https://gil1feldman.github.io/Wiki_users/" target="_blank">נתוני עריכות של עורכים בויקיפדיה</a>
+      <a class="link-item" href="https://gil1feldman.github.io/Knesset_laws/" target="_blank">הצעות חוק</a>
+    </div>
+  </main>
 
-    <footer>
-        הכלים מפותחים ע"י גיל פלדמן, המצב הנתון |
-        <a href="https://twitter.com/feldman_gil" target="_blank">@feldman_gil</a>
-    </footer>
+  <footer>
+    הכלים מפותחים ע"י גיל פלדמן, המצב הנתון |
+    <a href="https://twitter.com/feldman_gil" target="_blank">@feldman_gil</a>
+  </footer>
 
-    <script>
-        document.getElementById('searchInput').addEventListener('input', function () {
-            const searchTerm = this.value.toLowerCase();
-            const links = document.querySelectorAll('.link-item');
-            links.forEach(link => {
-                const text = link.textContent.toLowerCase();
-                link.style.display = text.includes(searchTerm) ? 'block' : 'none';
-            });
-        });
-    </script>
+  <script>
+    document.getElementById('searchInput').addEventListener('input', function () {
+      const searchTerm = this.value.toLowerCase();
+      const links = document.querySelectorAll('.link-item');
+      links.forEach(link => {
+        const text = link.textContent.toLowerCase();
+        link.style.display = text.includes(searchTerm) ? 'block' : 'none';
+      });
+    });
+  </script>
 
 </body>
 </html>
